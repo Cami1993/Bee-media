@@ -1,5 +1,5 @@
-// variabler 
-$bg-color:Black;
+// variabler
+$bg-color:#f0f0f0;
 $nav-color:#ffffff;
 $footer-color:#0a1f1c;
 $primary-color:#3a8479;
@@ -8,6 +8,7 @@ $text-color:#484848;
 $padding:0.5em;
 $font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+// mixinx
 
 @mixin flex($justify:center, $align:center){
     display: flex;
@@ -15,6 +16,8 @@ $font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     align-items: $align;
 }
 
+
+ // nesting til at bruge alle elementer
 body{
     margin:0;
     box-sizing: border-box;
@@ -34,4 +37,17 @@ body{
 img{
     width: 100%;
     height: auto;
+}
+
+.container{
+    display: grid;
+    grid-template-columns:repeat(5,1 fr );
+    grid-auto-rows: minmax(50px, auto);
+}
+
+header{
+    grid-column: 1/6;
+    @include flex($justify:space-between);
+    background-color:$bg-color;
+    border-bottom:4px solid $primary-color;
 }
