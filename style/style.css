@@ -6,12 +6,12 @@ body {
 }
 body p {
   font-size: 16px;
-  color: #484848;
+  color: black;
   line-height: 1.5;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-weight: 600;
-  color: #484848;
+  color: black;
 }
 
 img {
