@@ -39,15 +39,4 @@ img{
     height: auto;
 }
 
-.container{
-    display: grid;
-    grid-template-columns:repeat(5,1 fr );
-    grid-auto-rows: minmax(50px, auto);
-}
 
-header{
-    grid-column: 1/6;
-    @include flex($justify:space-between);
-    background-color:$bg-color;
-    border-bottom:4px solid $primary-color;
-}

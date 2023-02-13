@@ -17,19 +17,4 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 img {
   width: 100%;
   height: auto;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(5, 1 fr);
-  grid-auto-rows: minmax(50px, auto);
-}
-
-header {
-  grid-column: 1/6;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f0f0f0;
-  border-bottom: 4px solid #3a8479;
 }/*# sourceMappingURL=style.css.map */
