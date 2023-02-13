@@ -9,15 +9,6 @@ $text-color:black;
 $padding:0.5em;
 $font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-// mixinx
-
-@mixin flex($justify:center, $align:center){
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-
  // nesting til at bruge alle elementer
 body{
     margin:0;
