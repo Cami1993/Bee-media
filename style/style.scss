@@ -7,16 +7,16 @@
 body{
     margin:0;
     box-sizing: border-box;
-    font-family: $font;
-    background-color:$bg-color;
+    font-family:  partial.$font;
+    background-color:partial.$bg-color;
         p{
             font-size: 16px;
-            color: $text-color;
+            color: partial.$text-color;
             line-height: 1.5;
         }
         h1,h2,h3,h4,h5,h6{
             font-weight: 600;
-            color:$text-color;
+            color: partial.$text-color;
         }
 }
 
