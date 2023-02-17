@@ -1,0 +1,16 @@
+// variabler
+$bg-color:#f0f0f0;
+$nav-color:#F9D155;
+$footer-color:#F9D155;
+$text-color:#F28B50;
+$padding:0.5em;
+$font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+// mixinx
+
+@mixin flex($justify:center, $align:center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
