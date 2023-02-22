@@ -9,14 +9,17 @@ body{
     box-sizing: border-box;
     font-family:  partial.$font;
     background-color:partial.$bg-color;
+    background-image: url(/img/HoneycombBGopac.svg);
+    background-repeat:repeat;
+        h1,h2,h3,h4,h5,h6{
+            font-weight: 600;
+            color: partial.$text-color;
+        }
+        
         p{
             font-size: 16px;
             color: partial.$text-color;
             line-height: 1.5;
-        }
-        h1,h2,h3,h4,h5,h6{
-            font-weight: 600;
-            color: partial.$text-color;
         }
 }
 
@@ -25,4 +28,133 @@ img{
     height: auto;
 }
 
+.container{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows:minmax(50px,auto);
+}
+
+header{
+    grid-column:1/6;
+    @include partial.flex($justify:space-between);
+    background-color: partial.$nav-color;
+    border-bottom:0.2px solid partial.$primary-color;
+}
+
+//Navigation//
+
+nav{
+    color: partial.$text-color;
+    height:4em;
+    padding:1em;
+    @include partial.flex($justify:space-between);
+
+    img{
+        width:120px;
+        height:auto;
+    }
+
+    ul{
+        @include partial.flex;
+        list-style-type:none;
+    }
+
+    a{
+        color:partial.$primary-color;
+        padding:partial.$padding;
+        margin:partial.$padding;
+        font-size:20px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    ul a:hover{
+        color:partial.$secondary-color;
+    }
+}
+
+.mobile-nav{
+    .fa-bars{
+        color:partial.$primary-color;
+    }
+}
+
+//Header animeret banner//
+
+.header-animeretbanner{
+    position:relative;
+    margin-bottom:1em;
+
+    .gif-banner-mobil{
+        display:none;
+    }
+
+}
+
+//Main//
+
+main{
+    display:grid;
+    grid-column:1/6;
+    grid-template-columns: repeat(6,1fr);
+
+   
+    section{
+        min-height:100vh;
+        width:100%;
+        grid-column:1/7;
+        @include partial.flex;
+        }
+   
+       .container-a{
+           background-color:white;
+           border-color:10px solid partial.$primary-color;
+           width:90%;
+           max-width: 1000px;
+           margin:0 auto;
+           grid-column:3/6;
+           display:block;
+           align-items:center;
+           justify-content:center
+        } 
+
+        .text{
+            position:relative;
+            margin-top:10px;
+            margin-left:15px;
+            word-wrap: break-word;
+        }
+
+        .button{
+            position:absolute;
+            @include partial.btn;
+            margin:5px;
+            
+        }
+
+        .icon{
+            position:relative;
+            margin-top:80px;
+            margin-bottom:50px;
+            display: grid;
+
+        }
+        .icon a{
+            grid-template-rows: repeat(3,1fr);
+            text-decoration: none;
+            color:partial.$text-color;
+            text-align: center;
+        }
+       
+        .container-a img{
+            height:250px;
+            width:auto;
+            margin:0 auto;
+            padding:partial.$padding;
+            display: block;
+            
+            
+        }
+
+}
 
