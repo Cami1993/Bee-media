@@ -51,6 +51,7 @@ nav .mobile-nav {
 nav .mobile-nav .logo {
   width: 100px;
   height: auto;
+  position: absolute;
 }
 
 .fa-bars {
@@ -73,14 +74,12 @@ nav .mobile-nav .logo {
 }
 
 main {
-  display: grid;
-  grid-column: 1/5;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
+  display: flex-start;
+  flex-direction: column;
 }
 
 /*Section A*/
 .section-a {
-  grid-column: 1/5;
   min-height: 100vh;
   width: 100%;
 }
@@ -182,6 +181,11 @@ main {
 
 /*Section C*/
 /*Footer*/
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
 /*Footer bund*/
 /*Media Query*/
 @media (min-width: 1024px) {

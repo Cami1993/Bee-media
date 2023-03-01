@@ -43,7 +43,6 @@ header{
 }
 
 //Navigation//
-
 nav{
     color: partial.$text-color;
     height:5em;
@@ -55,6 +54,7 @@ nav{
     .logo{
         width:100px;
         height:auto;
+        position: absolute;
         }
     }
 }
@@ -84,14 +84,11 @@ nav{
 //Main//
 
 main{
-    display:grid;
-    grid-column:1/5;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-
+    display:flex-start;
+    flex-direction: column;
 }
    /*Section A*/
     .section-a{
-        grid-column:1/5;
         min-height:100vh;
         width:100%;
     }
@@ -191,7 +188,10 @@ main{
 
 
 /*Footer*/
-
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
 
 /*Footer bund*/
 
@@ -232,3 +232,8 @@ main{
         }
     }
 }
+
+
+// kontaktside css
+
+    
