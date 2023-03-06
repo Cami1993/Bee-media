@@ -2,10 +2,10 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f0f0;
-  background-image: url(/img/HoneycombBGopac.svg);
+  background-image: url(../img/HoneycombBGopac.svg);
   background-repeat: repeat;
-  background-size: content;
+  background-size: contain;
+  background-position: center;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-weight: 600;
@@ -24,15 +24,12 @@ img {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-columns: repeat(4, 2fr);
   grid-auto-rows: minmax(70px, auto);
 }
 
 header {
   grid-column: 1/5;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #F9D155;
   border-bottom: 0.2px solid #160D08;
 }
@@ -42,21 +39,28 @@ nav {
   height: 5em;
   padding: 2em;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: right;
 }
 nav .mobile-nav {
-  display: inline-block;
+  display: flex;
+  align-items: right;
 }
-nav .mobile-nav .logo {
-  width: 100px;
-  height: auto;
+
+.logo {
+  display: flex;
+  justify-content: center;
   position: absolute;
+  top: 1px;
+  z-index: 1;
+  width: 215px;
+  height: auto;
 }
 
 .fa-bars {
   color: #160D08;
   font-size: 70px;
+  display: flex;
+  text-align: right;
 }
 
 .desktop-nav {
@@ -74,8 +78,7 @@ nav .mobile-nav .logo {
 }
 
 main {
-  display: flex-start;
-  flex-direction: column;
+  grid-column: 1/5;
 }
 
 /*Section A*/
@@ -102,7 +105,8 @@ main {
 .text h1 {
   font-size: 40px;
 }
-.text .btn {
+
+.btn {
   position: absolute;
   background-color: #f0f0f0;
   padding: 1em 1em;
@@ -149,7 +153,7 @@ main {
 /*Section B*/
 .section-b {
   min-height: 100vh;
-  width: 100%;
+  width: 80%;
   display: grid;
   grid-column: 1/5;
   display: flex;
@@ -181,9 +185,8 @@ main {
 
 /*Section C*/
 /*Footer*/
-.footer {
-  display: flex;
-  flex-direction: column;
+footer {
+  grid-column: 1/5;
 }
 
 /*Footer bund*/

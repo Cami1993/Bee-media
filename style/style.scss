@@ -8,10 +8,10 @@ body{
     margin:0;
     box-sizing: border-box;
     font-family:  partial.$primary-font;
-    background-color:partial.$bg-color;
-    background-image: url(/img/HoneycombBGopac.svg);
+    background-image: url(../img/HoneycombBGopac.svg);
     background-repeat:repeat;
-    background-size:content;
+    background-size:contain;
+    background-position: center;
         h1,h2,h3,h4,h5,h6{
             font-weight: 600;
             color: partial.$text-color;
@@ -31,13 +31,12 @@ img{
 
 .container{
     display:grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-columns: repeat(4, 2fr);
     grid-auto-rows:minmax(70px,auto);
 }
 
 header{
     grid-column:1/5;
-    @include partial.flex($justify:space-between);
     background-color: partial.$nav-color;
     border-bottom:0.2px solid partial.$primary-color;
 }
@@ -47,21 +46,32 @@ nav{
     color: partial.$text-color;
     height:5em;
     padding:2em;
-    @include partial.flex($justify:space-between);
+    display: flex;
+    align-items: right;
+    // @include partial.flex($justify:space-between);
 
     .mobile-nav{
-        display:inline-block;
-    .logo{
-        width:100px;
-        height:auto;
-        position: absolute;
-        }
+        display:flex;
+        align-items: right;
     }
 }
+
+.logo{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 1px;
+    z-index: 1;
+    width: 215px;
+    height: auto;
+    
+    }
 
 .fa-bars{
     color:partial.$primary-color;
     font-size:70px; 
+    display: flex;
+    text-align: right;
 }
 .desktop-nav{
     display: none;
@@ -84,13 +94,12 @@ nav{
 //Main//
 
 main{
-    display:flex-start;
-    flex-direction: column;
+    grid-column: 1/5;
 }
    /*Section A*/
     .section-a{
         min-height:100vh;
-        width:100%;
+        width: 100%;
     }
    
        .container-a{
@@ -111,12 +120,12 @@ main{
              h1{
                 font-size:40px;
                }
-
-             .btn{
+        }
+            .btn{
              position:absolute;
              @include partial.btn;
                }
-    }
+
         .icon-area-a{
             position:relative;
             margin-top:50px;
@@ -153,7 +162,7 @@ main{
  /*Section B*/
  .section-b{
     min-height:100vh;
-    width:100%;
+    width:80%;
     display:grid;
     grid-column:1/5;
     @include partial.flex;
@@ -188,9 +197,8 @@ main{
 
 
 /*Footer*/
-    .footer{
-        display: flex;
-        flex-direction: column;
+    footer{
+       grid-column:1/5 ;
     }
 
 /*Footer bund*/
