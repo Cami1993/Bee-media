@@ -38,7 +38,7 @@ img{
 header{
     grid-column:1/5;
     background-color: partial.$nav-color;
-    border-bottom:0.2px solid partial.$primary-color;
+    border-bottom:1px dotted partial.$primary-color;
 }
 
 //Navigation//
@@ -47,14 +47,18 @@ nav{
     height:5em;
     padding:2em;
     display: flex;
-    align-items: right;
     // @include partial.flex($justify:space-between);
 
     .mobile-nav{
-        display:flex;
-        align-items: right;
+        float: right;
     }
 }
+
+.fa-bars{
+        display:flex;
+        float: right;
+    }
+
 
 .logo{
     display: flex;
