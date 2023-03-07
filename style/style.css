@@ -31,35 +31,32 @@ img {
 header {
   grid-column: 1/5;
   background-color: #F9D155;
-  border-bottom: 0.2px solid #160D08;
 }
 
-nav {
-  color: #F28B50;
-  height: 5em;
-  padding: 2em;
-  display: flex;
-  align-items: right;
+.box-1 {
+  border: solid, 5px;
 }
-nav .mobile-nav {
-  display: flex;
-  align-items: right;
+
+.mobile-nav {
+  height: 10%;
+  padding: 15%;
+  display: inline-block;
+  border: solid, 1px;
 }
 
 .logo {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 1px;
+  top: 10px;
   z-index: 1;
-  width: 215px;
+  width: 180px;
   height: auto;
 }
 
 .fa-bars {
   color: #160D08;
-  font-size: 70px;
-  display: flex;
+  font-size: 60px;
   text-align: right;
 }
 

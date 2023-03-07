@@ -27,3 +27,30 @@ $secondary-font: 'Roboto Slab', serif;
     text-decoration: none;
     text-align: center;
 }
+
+@mixin dashed-borders($color:$primary-color, $width:3px, $gap:20px) {
+    // 1. Horizontal Top
+    // 2. Horizontal Bottom
+    // 3. Vertical Left
+    // 4. Vertical Right
+    background-image:
+      linear-gradient(to right, $color 50%, transparent 50%),
+      linear-gradient(to right, $color 50%, transparent 50%),
+      linear-gradient(to bottom, $color 50%, transparent 50%),
+      linear-gradient(to bottom, $color 50%, transparent 50%);
+    background-size:
+      $gap $width,
+      $gap $width,
+      $width $gap,
+      $width $gap;
+    background-repeat:
+      repeat-x,
+      repeat-x,
+      repeat-y,
+      repeat-y;
+    background-position:
+      top,
+      bottom,
+      left,
+      right;
+  }

@@ -38,25 +38,22 @@ img{
 header{
     grid-column:1/5;
     background-color: partial.$nav-color;
-    border-bottom:1px dotted partial.$primary-color;
+    // @include dashed-borders; 
+    
+    // 3px dotted partial.$primary-color;
 }
 
 //Navigation//
-nav{
-    color: partial.$text-color;
-    height:5em;
-    padding:2em;
-    display: flex;
-    // @include partial.flex($justify:space-between);
 
+    
     .mobile-nav{
-        float: right;
-    }
-}
-
-.fa-bars{
-        display:flex;
-        float: right;
+        //color: partial.$text-color;
+        height: 10%;
+        padding: 15%;
+        // @include partial.flex($justify:space-between);
+        display: flex;
+        border: solid;
+        
     }
 
 
@@ -64,17 +61,15 @@ nav{
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 1px;
+    top: 10px;
     z-index: 1;
-    width: 215px;
+    width: 180px;
     height: auto;
-    
     }
 
 .fa-bars{
     color:partial.$primary-color;
-    font-size:70px; 
-    display: flex;
+    font-size:60px; 
     text-align: right;
 }
 .desktop-nav{
