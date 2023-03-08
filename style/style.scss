@@ -8,19 +8,21 @@ body{
     margin:0;
     box-sizing: border-box;
     font-family:  partial.$primary-font;
-    background-image: url(../img/HoneycombBGopac.svg);
-    background-repeat:repeat;
-    background-size:contain;
-    background-position: center;
+    background-color: partial.$bg-color;
+    // background-image: url(../img/HoneycombBGopac.svg);
+    // background-repeat:repeat;
+    // background-size:contain;
+    // background-position: center;
         h1,h2,h3,h4,h5,h6{
             font-weight: 600;
             color: partial.$text-color;
+            font-family: partial.$secondary-font;
         }
         
         p{
-            font-size: 25px;
-            color: partial.$text-color;
+            color: partial.$primary-color;
             line-height: 1.5;
+            font-family: partial.$primary-font;
         }
 }
 
@@ -38,39 +40,34 @@ img{
 header{
     grid-column:1/5;
     background-color: partial.$nav-color;
-    // @include dashed-borders; 
-    
-    // 3px dotted partial.$primary-color;
 }
 
 //Navigation//
 
-    
     .mobile-nav{
         //color: partial.$text-color;
-        height: 10%;
-        padding: 15%;
-        // @include partial.flex($justify:space-between);
+        width: auto;
+        padding: 10%;
         display: flex;
-        border: solid;
-        
+        border: dashed;
     }
-
 
 .logo{
     display: flex;
     justify-content: center;
     position: absolute;
     top: 10px;
+    left: 25%;
     z-index: 1;
-    width: 180px;
+    width: 150px;
     height: auto;
     }
 
 .fa-bars{
     color:partial.$primary-color;
-    font-size:60px; 
-    text-align: right;
+    font-size:50px; 
+    // text-align: right; -- virker ikke idk så har sat en margin på for nu
+    margin-left: 85%;
 }
 .desktop-nav{
     display: none;
@@ -79,13 +76,13 @@ header{
 
 //Header animeret banner//
 
-.gif-banner-mobil{
+.banner-mobil{
     position:relative;
     margin-bottom:1em;
     max-width:100%;
 }
 
- .gif-banner-desktop{
+ .banner-desktop{
         display:none;
 }
 
@@ -108,17 +105,20 @@ main{
            max-width: 500px;
            margin:20px;
            padding: partial.$padding;
+           border: dashed;
         } 
 
         .text{
-            position:block;
             padding:1em;
-            margin: 2em auto;
             word-wrap: break-word;
            
-             h1{
-                font-size:40px;
+            h1{
+                font-size:28px;
                }
+
+            p {
+                font-size:18px;
+            }
         }
             .btn{
              position:absolute;
@@ -148,23 +148,23 @@ main{
             font-weight: 600;
             font-size:30px;
             font-family: partial.$secondary-font;
+            padding: 10px 0 10px 0;
         }
        
         .container-a img{
             height:250px;
             width:auto;
             margin:0 auto;
-            padding:partial.$padding;
             display: block; 
         }
 
  /*Section B*/
  .section-b{
     min-height:100vh;
-    width:80%;
+    width:100%;
     display:grid;
     grid-column:1/5;
-    @include partial.flex;
+    // @include partial.flex ($justify-content: center);
 
     .banner-udrag-projekt img{
         position:relative;
@@ -196,12 +196,22 @@ main{
 
 
 /*Footer*/
-    footer{
+    .footer-left{
        grid-column:1/5 ;
+       h3{
+            font-size: 28px;
+    }
+        p{
+            font-size: 18px;
+            font-family: partial.$primary-font;
+        }
     }
 
 /*Footer bund*/
+    .footer-bottom{
 
+    
+    }
 
 /*Media Query*/ 
 @media(min-width:1024px){
