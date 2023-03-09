@@ -173,11 +173,14 @@ main{
     }
 
     .section-b-billede{
+        background-color:transparent;
         max-width:500px;
         height:auto;
-        margin:2em auto;
+        margin:20px;
+        padding:partial.$padding;
         display:flex;
         flex-direction:column;
+        border:thin dashed partial.$primary-color;
     }
 
     .read-about-case{
@@ -186,15 +189,14 @@ main{
         border: thin dashed partial.$primary-color;
         height:auto;
         max-width:500px;
-        margin:2em auto;
+        margin:20px;
         padding:partial.$padding;
         display:flex;
         flex-direction:column;
     }
     .button{
         @include partial.flex;
-        margin:3em 0 3em 0;
-        
+        margin:3em; 
     }
  }
 
@@ -202,7 +204,27 @@ main{
 .section-c{
     grid-column:1/5;
 }
-.meet-us
+.meet-us{
+    max-width:100%;
+    height:auto;
+    padding:partial.$padding;
+    background-color: partial.$nav-color;
+    text-align:center;
+
+    h2{
+        font-size:40px;
+    }
+    h3{
+        font-size:25px;
+        color:partial.$bg-color;
+    }
+}
+.video{
+    max-width:100%;
+    height:200px;
+    margin:partial.$padding;
+    border:1px solid partial.$primary-color;
+}
 /*Footer*/
 
 footer {

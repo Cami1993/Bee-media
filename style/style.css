@@ -158,11 +158,14 @@ main {
   grid-column: 1/5;
 }
 .section-b .section-b-billede {
+  background-color: transparent;
   max-width: 500px;
   height: auto;
-  margin: 2em auto;
+  margin: 20px;
+  padding: 0.8em;
   display: flex;
   flex-direction: column;
+  border: thin dashed #160D08;
 }
 .section-b .read-about-case {
   grid-column: 1/5;
@@ -170,7 +173,7 @@ main {
   border: thin dashed #160D08;
   height: auto;
   max-width: 500px;
-  margin: 2em auto;
+  margin: 20px;
   padding: 0.8em;
   display: flex;
   flex-direction: column;
@@ -179,7 +182,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3em 0 3em 0;
+  margin: 3em;
 }
 
 /*Section C*/
@@ -187,7 +190,30 @@ main {
   grid-column: 1/5;
 }
 
-.meet-us footer {
+.meet-us {
+  max-width: 100%;
+  height: auto;
+  padding: 0.8em;
+  background-color: #F9D155;
+  text-align: center;
+}
+.meet-us h2 {
+  font-size: 40px;
+}
+.meet-us h3 {
+  font-size: 25px;
+  color: #f9ece3;
+}
+
+.video {
+  max-width: 100%;
+  height: 200px;
+  margin: 0.8em;
+  border: 1px solid #160D08;
+}
+
+/*Footer*/
+footer {
   border: 3px thin dashed;
 }
 
