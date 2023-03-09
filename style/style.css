@@ -29,13 +29,13 @@ img {
 header {
   grid-column: 1/5;
   background-color: #F9D155;
+  border-bottom: thin dashed #160D08;
 }
 
 .mobile-nav {
   width: auto;
   padding: 10%;
   display: flex;
-  border: dashed;
 }
 
 .logo {
@@ -81,12 +81,11 @@ main {
 
 .container-a {
   background-color: white;
-  border-color: 4px solid #160D08;
+  border: thin dashed #160D08;
   height: auto;
   max-width: 500px;
   margin: 20px;
   padding: 0.8em;
-  border: dashed;
 }
 
 .text {
@@ -152,31 +151,46 @@ main {
   display: grid;
   grid-column: 1/5;
 }
-.section-b .banner-udrag-projekt img {
+.section-b .banner-mobile-b {
   position: relative;
   max-width: 100%;
   margin-top: 0;
   grid-column: 1/5;
-  border-bottom: 1px solid #160D08;
 }
 .section-b .section-b-billede {
-  width: 300px;
+  max-width: 500px;
   height: auto;
+  margin: 2em auto;
   display: flex;
   flex-direction: column;
 }
 .section-b .read-about-case {
+  grid-column: 1/5;
   background-color: white;
-  border-color: 4px solid #160D08;
-  height: 240px;
-  max-width: 300px;
-  margin-top: 5px;
+  border: thin dashed #160D08;
+  height: auto;
+  max-width: 500px;
+  margin: 2em auto;
+  padding: 0.8em;
   display: flex;
   flex-direction: column;
 }
+.section-b .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3em 0 3em 0;
+}
 
 /*Section C*/
-/*Footer*/
+.section-c {
+  grid-column: 1/5;
+}
+
+.meet-us footer {
+  border: 3px thin dashed;
+}
+
 .footer-left {
   grid-column: 1/5;
 }
@@ -186,6 +200,11 @@ main {
 .footer-left p {
   font-size: 18px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-right .social-icon {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /*Footer bund*/

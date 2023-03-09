@@ -40,6 +40,7 @@ img{
 header{
     grid-column:1/5;
     background-color: partial.$nav-color;
+    border-bottom: thin dashed partial.$primary-color;
 }
 
 //Navigation//
@@ -49,7 +50,6 @@ header{
         width: auto;
         padding: 10%;
         display: flex;
-        border: dashed;
     }
 
 .logo{
@@ -100,12 +100,11 @@ main{
    
        .container-a{
            background-color:white;
-           border-color:4px solid partial.$primary-color;
+           border: thin dashed partial.$primary-color;
            height: auto;
            max-width: 500px;
            margin:20px;
            padding: partial.$padding;
-           border: dashed;
         } 
 
         .text{
@@ -166,36 +165,50 @@ main{
     grid-column:1/5;
     // @include partial.flex ($justify-content: center);
 
-    .banner-udrag-projekt img{
+    .banner-mobile-b{
         position:relative;
         max-width:100%;
         margin-top:0;
         grid-column:1/5;
-        border-bottom: 1px solid partial.$primary-color; 
     }
 
     .section-b-billede{
-        width:300px;
+        max-width:500px;
         height:auto;
+        margin:2em auto;
         display:flex;
         flex-direction:column;
     }
 
     .read-about-case{
+        grid-column:1/5;
         background-color: white;
-        border-color:4px solid partial.$primary-color;
-        height:240px;
-        max-width:300px;
-        margin-top:5px;
+        border: thin dashed partial.$primary-color;
+        height:auto;
+        max-width:500px;
+        margin:2em auto;
+        padding:partial.$padding;
         display:flex;
         flex-direction:column;
+    }
+    .button{
+        @include partial.flex;
+        margin:3em 0 3em 0;
+        
     }
  }
 
 /*Section C*/
-
-
+.section-c{
+    grid-column:1/5;
+}
+.meet-us
 /*Footer*/
+
+footer {
+    border: 3px thin dashed;
+
+}
     .footer-left{
        grid-column:1/5 ;
        h3{
@@ -204,6 +217,13 @@ main{
         p{
             font-size: 18px;
             font-family: partial.$primary-font;
+        }
+    }
+
+    .footer-right{
+        .social-icon{
+            display:flex;
+            justify-content: space-evenly;
         }
     }
 
