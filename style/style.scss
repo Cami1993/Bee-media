@@ -56,10 +56,10 @@ header{
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 10px;
-    left: 25%;
+    top: 8px;
+    left: 27%;
     z-index: 1;
-    width: 150px;
+    width: 180px;
     height: auto;
     }
 
@@ -222,17 +222,22 @@ main{
 .video{
     max-width:100%;
     height:200px;
-    margin:partial.$padding;
+    margin:20px;
     border:1px solid partial.$primary-color;
 }
 /*Footer*/
 
-footer {
-    border: 3px thin dashed;
+.main-footer{
+    grid-column:1/5;
+    background-color: partial.$bg-color;
+    border-top:thin dashed partial.$primary-color;
+    max-width:100%;
+    height:auto;
 
 }
     .footer-left{
        grid-column:1/5 ;
+       margin:20px;
        h3{
             font-size: 28px;
     }
@@ -243,17 +248,36 @@ footer {
     }
 
     .footer-right{
+        grid-column:1/5;
+        margin:20px;
         .social-icon{
             display:flex;
             justify-content: space-evenly;
+            text-align: center;
+
+            .fa-linkedin-in, .fa-instagram, .fa-facebook-f, .fa-tiktok{
+                font-size: 40px;
+                color:partial.$secondary-color;
+        
+             }    
         }
+        
     }
 
 /*Footer bund*/
-    .footer-bottom{
+    .bottom-footer{
+        grid-column:1/5;
+        padding:partial.$padding;
+        background-color: partial.$nav-color;
+        border-top: thin dashed partial.$primary-color;
 
-    
+        p{
+            font-weight:600;
+            text-align:center;
+            margin-top:0.5em;
+        }
     }
+
 
 /*Media Query*/ 
 @media(min-width:1024px){

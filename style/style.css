@@ -42,10 +42,10 @@ header {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 10px;
-  left: 25%;
+  top: 8px;
+  left: 27%;
   z-index: 1;
-  width: 150px;
+  width: 180px;
   height: auto;
 }
 
@@ -208,17 +208,22 @@ main {
 .video {
   max-width: 100%;
   height: 200px;
-  margin: 0.8em;
+  margin: 20px;
   border: 1px solid #160D08;
 }
 
 /*Footer*/
-footer {
-  border: 3px thin dashed;
+.main-footer {
+  grid-column: 1/5;
+  background-color: #f9ece3;
+  border-top: thin dashed #160D08;
+  max-width: 100%;
+  height: auto;
 }
 
 .footer-left {
   grid-column: 1/5;
+  margin: 20px;
 }
 .footer-left h3 {
   font-size: 28px;
@@ -228,12 +233,33 @@ footer {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.footer-right {
+  grid-column: 1/5;
+  margin: 20px;
+}
 .footer-right .social-icon {
   display: flex;
   justify-content: space-evenly;
+  text-align: center;
+}
+.footer-right .social-icon .fa-linkedin-in, .footer-right .social-icon .fa-instagram, .footer-right .social-icon .fa-facebook-f, .footer-right .social-icon .fa-tiktok {
+  font-size: 40px;
+  color: #C96BA0;
 }
 
 /*Footer bund*/
+.bottom-footer {
+  grid-column: 1/5;
+  padding: 0.8em;
+  background-color: #F9D155;
+  border-top: thin dashed #160D08;
+}
+.bottom-footer p {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
 /*Media Query*/
 @media (min-width: 1024px) {
   .mobile-nav {
