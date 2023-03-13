@@ -255,10 +255,9 @@ main{
             justify-content: space-evenly;
             text-align: center;
 
-            .fa-linkedin-in, .fa-instagram, .fa-facebook-f, .fa-tiktok{
-                font-size: 40px;
-                color:partial.$secondary-color;
-        
+            .linkedin, .instagram, .facebook, .tiktok{
+                width: 70px;
+                height: auto;
              }    
         }
         
