@@ -52,12 +52,12 @@ header{
         display: flex;
     }
 
-.logo{
+.logo-mobile{
     display: flex;
     justify-content: center;
     position: absolute;
     top: 8px;
-    left: 27%;
+    left: 25%;
     z-index: 1;
     width: 180px;
     height: auto;
@@ -76,7 +76,7 @@ header{
 
 //Header animeret banner//
 
-.banner-mobil{
+.banner-mobile{
     position:relative;
     margin-bottom:1em;
     max-width:100%;
@@ -139,6 +139,7 @@ main{
             margin-bottom: 20px;
             display: flex;
             flex-direction: column;
+            
         }
         .graphic-icon, .branding-icon, .some-icon, .webdesign-icon{
             text-decoration: none;
@@ -170,6 +171,10 @@ main{
         max-width:100%;
         margin-top:0;
         grid-column:1/5;
+    }
+
+    .banner-desktop-b{
+        display: none;
     }
 
     .section-b-billede{
@@ -204,20 +209,15 @@ main{
 .section-c{
     grid-column:1/5;
 }
-.meet-us{
+.meet-us-banner-mobile{
+    position:relative;
     max-width:100%;
-    height:auto;
-    padding:partial.$padding;
-    background-color: partial.$nav-color;
-    text-align:center;
-
-    h2{
-        font-size:40px;
-    }
-    h3{
-        font-size:25px;
-        color:partial.$bg-color;
-    }
+    margin-top:0;
+    grid-column:1/5;
+    
+}
+.meet-us-banner-desktop{
+    display:none;
 }
 .video{
     max-width:100%;
@@ -283,17 +283,22 @@ main{
     .mobile-nav{
         display:none;
     }
-    .logo{
-        width:70px;
-        height:auto;
+
+    .logo-desktop{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 4%;
+    left: 45%;
+    z-index: 1;
+    width: 180px;
+    height: auto;
     }
-    .fa-bars{
-        display:none;
     }
 
     .desktop-nav{
         display:inline-block;
-
+        padding: 3%;
         ul{
             display:flex;
             justify-content: space-between;
@@ -304,8 +309,8 @@ main{
         li a{
             color:partial.$primary-color;
             padding:partial.$padding;
-            margin:partial.$padding;
-            font-size:30px;
+            
+            font-size:25px;
             font-weight:600;
             text-decoration:none;
         }
@@ -313,7 +318,7 @@ main{
             color:partial.$secondary-color;
         }
     }
-}
+
 
 
 // kontaktside css

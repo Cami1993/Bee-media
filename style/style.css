@@ -38,12 +38,12 @@ header {
   display: flex;
 }
 
-.logo {
+.logo-mobile {
   display: flex;
   justify-content: center;
   position: absolute;
   top: 8px;
-  left: 27%;
+  left: 25%;
   z-index: 1;
   width: 180px;
   height: auto;
@@ -59,7 +59,7 @@ header {
   display: none;
 }
 
-.banner-mobil {
+.banner-mobile {
   position: relative;
   margin-bottom: 1em;
   max-width: 100%;
@@ -157,6 +157,9 @@ main {
   margin-top: 0;
   grid-column: 1/5;
 }
+.section-b .banner-desktop-b {
+  display: none;
+}
 .section-b .section-b-billede {
   background-color: transparent;
   max-width: 500px;
@@ -190,19 +193,15 @@ main {
   grid-column: 1/5;
 }
 
-.meet-us {
+.meet-us-banner-mobile {
+  position: relative;
   max-width: 100%;
-  height: auto;
-  padding: 0.8em;
-  background-color: #F9D155;
-  text-align: center;
+  margin-top: 0;
+  grid-column: 1/5;
 }
-.meet-us h2 {
-  font-size: 40px;
-}
-.meet-us h3 {
-  font-size: 25px;
-  color: #f9ece3;
+
+.meet-us-banner-desktop {
+  display: none;
 }
 
 .video {
@@ -265,31 +264,34 @@ main {
   .mobile-nav {
     display: none;
   }
-  .logo {
-    width: 70px;
+  .logo-desktop {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 4%;
+    left: 45%;
+    z-index: 1;
+    width: 180px;
     height: auto;
   }
-  .fa-bars {
-    display: none;
-  }
-  .desktop-nav {
-    display: inline-block;
-  }
-  .desktop-nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    list-style-type: none;
-  }
-  .desktop-nav li a {
-    color: #160D08;
-    padding: 0.8em;
-    margin: 0.8em;
-    font-size: 30px;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  .desktop-nav ul a:hover {
-    color: #C96BA0;
-  }
+}
+.desktop-nav {
+  display: inline-block;
+  padding: 3%;
+}
+.desktop-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  list-style-type: none;
+}
+.desktop-nav li a {
+  color: #160D08;
+  padding: 0.8em;
+  font-size: 25px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.desktop-nav ul a:hover {
+  color: #C96BA0;
 }/*# sourceMappingURL=style.css.map */
