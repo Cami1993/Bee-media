@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skal vi hos Bee Media hjælpe dit firma at nå det næste niveau? Nyt hjemmeside, logo, bannere eller en hel 360°-brandingopdatering. Kontakt os idag!">
+    <meta name="keywords" content="nyt hjemmeside, logo, bannere, brandingopdatering">
     <link rel="stylesheet" href="style/style.css">
-    <title>Kontakt os</title>
+    <title>Få et uforpligtende tilbud - Send os en besked</title>
+    <script src="https://kit.fontawesome.com/e880588450.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -14,7 +17,7 @@
         <header>
             <!-- Mobil navigation -->
             <nav class="mobile-nav">
-                <a class="logo" href="#"><img src="img/Bee Media logo.svg" alt="logo"></a>
+                <a class="logo-mobile" href="#"><img src="img/Bee Media logo.svg" alt="logo af bien"></a>
                 <!-- Burgernav -->
                 <i class="fa-solid fa-bars"></i>
             </nav>
@@ -27,26 +30,94 @@
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="#">Cases</a></li>
                     <li><a href="#">Mød Bierne</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="kontak_os.html">Kontakt</a></li>
                 </ul>
  
             </nav>
         </header>
 
-<header class="header-animeretbanner">
-    <img class="gif-banner-mobil" src="img/kontakt os mobile_1.gif" alt="header animeret banner">
-    <img class="gif-banner-desktop" src="#" alt="header animeret banner">
-</header>
+<!-- Her kommer vores animeret banner til kontakt siden -->
+        <!-- Animeretbanner -->
+        <header class="banner-mobile">
+            <img class="" src="img/contact-us-banner-mobil.gif" alt="animeret banner til vores kontakt side ">
+        </header>
+
+        <header class="banner-desktop">
+            <img class="" src="img/contact-us-banner-desktop.gif" alt="animeret banner til vores kontakt side">
+        </header>
 
         
-<main>
+<main class="contact-container">
+    <h2>Forside > Kontakt Os </h2>
+            <section class="contact-us">
+                <form class="contactform">
+                    <h3>Få et uforpligtende tilbud - Send os en besked</h3>
+                    <p>Skal vi hos Bee Media hjælpe dit firma at nå det næste niveau? Nyt hjemmeside, logo, bannere eller en hel 360°-brandingopdatering. Kontakt os idag!</p>
 
-                
+                    <div class="section-form">
+                        <label class="visually-hidden" for="navn">Navn</label>
+                        <input placeholder="Navn"  id="navn" type="text" required>
 
+                        <label class="visually-hidden" for="mail">E-mail</label>
+                        <input placeholder="E-mail" id="mail" type="email">
+                    </div>
+                    <div class="section-form">
+                        <label class="visually-hidden" for="telefon">Telefonnummer</label>
+                        <input placeholder="Telefon nummer" id="telefon" type="tel">
 
+                        <label class="visually-hidden" for="region">Vælg region</label>
+                        <select id="region" name="select">
+                            <option value="0" selected="true" disabled>Vælg region</option>
+                            <option value="1">Region Nordjylland</option>
+                            <option value="2">Region Midtjylland</option>
+                            <option value="3">Region Syddanmark</option>
+                            <option value="4">Region Sjælland</option>
+                            <option value="5">Region Hovedstaden</option> 
+                        </select>
+                    </div>
+                    <div class="section-form">
+                        <label class="visually-hidden" for="besked">Besked</label>
+                        <textarea placeholder="Besked" id="besked" rows="8"></textarea></div>
+                    <div class="section-form">
+                        <input type="submit" name="submit" value="Send besked">
+                    </div>
+
+                </form>
+
+                <div class="group-photo">
+                    <img class="photo" src="img/group-photo-with-logo.png" alt="billede af vores grafiske specialister">
+                </div>
+
+            </section>
 </main>
-         
 
+<!--Footer-->
+<footer class="main-footer">
+    <section class="footer-left">
+        <h3>Kontakt</h3>  
+        <p>+45 56 34 95 67</p> 
+        <p>Honningvej 1, 6000 Kolding</p> 
+        <p>Bee@Media.dk</p> 
+    </section>
+    <section class="footer-right">
+        <div class="social-icon">
+             <a href="#"><img class="linkedin" src="img/linkedin-icon.svg"alt="Linkedin"></a>
+             <a href="#"><img class="instagram" src="img/instagram-icon.svg" alt="Instagram"></a>
+             <a href="#"><img class="facebook" src="img/facebook-icon.svg" alt="Facebook"></a>
+             <a href="#"><img class="tiktok" src="img/tiktok-icon.svg" alt="TikTok"></a>
+        </div>
+    </section>
+     <!-- billede med grene til desktop --> 
+     <div class="footer-desktop-img">
+        <img class="branch-img" src="img/tree-branch.png" alt="visuelt billede af grenen ">
+    </div>
+</footer>
 
+ <!-- footer bund -->
+ <footer class="bottom-footer">
+    <p>© 2023 / All rights reserved / Bee Media </p>
+</footer>
+
+</div>       
 </body>
 </html>

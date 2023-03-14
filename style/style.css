@@ -38,6 +38,10 @@ header {
   display: flex;
 }
 
+.logo-desktop {
+  display: none;
+}
+
 .logo-mobile {
   display: flex;
   justify-content: center;
@@ -83,19 +87,18 @@ main {
   background-color: white;
   border: thin dashed #160D08;
   height: auto;
-  max-width: 500px;
   margin: 20px;
   padding: 0.8em;
 }
 
-.text {
+.text-a {
   padding: 1em;
   word-wrap: break-word;
 }
-.text h1 {
+.text-a h1 {
   font-size: 28px;
 }
-.text p {
+.text-a p {
   font-size: 18px;
 }
 
@@ -162,7 +165,7 @@ main {
 }
 .section-b .section-b-billede {
   background-color: transparent;
-  max-width: 500px;
+  width: auto;
   height: auto;
   margin: 20px;
   padding: 0.8em;
@@ -171,15 +174,14 @@ main {
   border: thin dashed #160D08;
 }
 .section-b .read-about-case {
-  grid-column: 1/5;
   background-color: white;
   border: thin dashed #160D08;
   height: auto;
-  max-width: 500px;
   margin: 20px;
   padding: 0.8em;
-  display: flex;
-  flex-direction: column;
+}
+.section-b .section-b .p {
+  font-size: 18px;
 }
 .section-b .button {
   display: flex;
@@ -229,7 +231,6 @@ main {
 }
 .footer-left p {
   font-size: 18px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-right {
@@ -238,12 +239,16 @@ main {
 }
 .footer-right .social-icon {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-align: center;
 }
 .footer-right .social-icon .linkedin, .footer-right .social-icon .instagram, .footer-right .social-icon .facebook, .footer-right .social-icon .tiktok {
   width: 70px;
   height: auto;
+}
+
+.footer-desktop-img {
+  display: none;
 }
 
 /*Footer bund*/
@@ -259,39 +264,231 @@ main {
   margin-top: 0.5em;
 }
 
+/* kontaktside*/
+.contact-container {
+  grid-column: 1/5;
+}
+.contact-container h2 {
+  color: #C96BA0;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.contact-us {
+  background-color: white;
+  border: thin dashed #160D08;
+  height: auto;
+  max-width: 500px;
+  margin: 20px;
+  padding: 0.8em;
+}
+
+.contactform {
+  margin: 10px;
+}
+.contactform h3 {
+  margin: 0;
+  margin-bottom: 0.5em;
+  font-size: 28px;
+}
+.contactform p {
+  margin: 0 0 1.5em 0;
+  word-wrap: break-word;
+  font-size: 18px;
+}
+
+.section-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+}
+
+input[type=text], input[type=email], input[type=tel], select, textarea {
+  width: 100%;
+  padding: 0.8em;
+  border: thin dashed #160D08;
+  border-radius: 14px;
+  box-sizing: border-box;
+  margin: 0.2em 1em 1em 1em;
+  font-family: "Roboto Slab", serif;
+}
+
+input[type=submit] {
+  background-color: white;
+  padding: 1em 1em;
+  border-radius: 18px;
+  border: 4px solid #C96BA0;
+  color: #160D08;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.group-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 10px;
+}
+.group-photo .photo {
+  margin-top: 25px;
+  width: 100%;
+  height: auto;
+}
+
 /*Media Query*/
 @media (min-width: 1024px) {
   .mobile-nav {
     display: none;
+  }
+  .banner-mobile, .banner-mobile-b {
+    display: none;
+  }
+  .banner-desktop {
+    display: inline;
+    position: relative;
+    max-width: 100%;
+    margin-top: 0;
+    grid-column: 1/5;
+  }
+  .banner-desktop-b {
+    display: inline;
+    position: relative;
+    max-width: 100%;
+    margin-top: 0;
+    grid-column: 1/9;
   }
   .logo-desktop {
     display: flex;
     justify-content: center;
     position: absolute;
     top: 4%;
-    left: 45%;
+    left: 50%;
     z-index: 1;
     width: 180px;
     height: auto;
   }
-}
-.desktop-nav {
-  display: inline-block;
-  padding: 3%;
-}
-.desktop-nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  list-style-type: none;
-}
-.desktop-nav li a {
-  color: #160D08;
-  padding: 0.8em;
-  font-size: 25px;
-  font-weight: 600;
-  text-decoration: none;
-}
-.desktop-nav ul a:hover {
-  color: #C96BA0;
+  .desktop-nav {
+    display: flex;
+    padding: 2%;
+    justify-content: space-between;
+  }
+  .desktop-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    list-style-type: none;
+  }
+  .desktop-nav li a {
+    color: #160D08;
+    padding: 0.8em;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .desktop-nav ul a:hover {
+    color: #C96BA0;
+  }
+  input[type=search] {
+    width: 300px;
+    padding: 0.8em;
+    border: dashed #C96BA0;
+    box-sizing: border-box;
+    margin: 0.2em 1em 1em 1em;
+    font-family: "Roboto Slab", serif;
+  }
+  .search {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 0.5em;
+  }
+  .fa-magnifying-glass {
+    font-size: 40px;
+    color: #C96BA0;
+  }
+  .container-a {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .text-a {
+    grid-column: 1/5;
+  }
+  .icon-area-a {
+    grid-column: 5/7;
+    margin-top: 0;
+  }
+  .icon-area-b {
+    grid-column: 7/9;
+  }
+  .container-b {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .section-b-billede {
+    grid-column: 1/5;
+  }
+  .wrapper-case {
+    grid-column: 5/9;
+  }
+  .btn {
+    align-items: left;
+  }
+  .main-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-left h3 {
+    margin: 0;
+  }
+  .footer-left p {
+    margin: 0;
+  }
+  .footer-right {
+    margin: 35px 0 25px 0;
+  }
+  .footer-right .social-icon {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    text-align: center;
+  }
+  .footer-right .linkedin, .footer-right .instagram, .footer-right .facebook, .footer-right .tiktok {
+    width: 120px;
+    height: auto;
+    margin: 10px;
+  }
+  .footer-desktop-img {
+    margin: 16px 0 8px 0px;
+    display: flex;
+  }
+  .footer-desktop-img .branch-img {
+    width: 300px;
+    height: 125px;
+  }
+  .contact-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+  }
 }/*# sourceMappingURL=style.css.map */

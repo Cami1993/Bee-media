@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vi er eksperter inden fire kerneområder, som Grafisk arbejde, Branding samt Sociale Medier og Webdesign. Vi skaber visuel identitet til dit firma.">
+    <meta name="description" content="Vi er eksperter inden for fire kerneområder; Grafisk arbejde, Branding samt Sociale Medier og Webdesign. Vi skaber visuel identitet til dit firma.">
     <meta name="keywords" content="grafisk arbejde, branding, sociale medier, webdesign, visuel identitet">
     <link rel="stylesheet" href="style/style.css">
     <title>Multimediebureau - Specialister i Grafisk Design</title>
@@ -30,9 +30,15 @@
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="#">Cases</a></li>
                     <li><a href="#">Mød Bierne</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="kontak_os.html">Kontakt</a></li>
                 </ul>
                 <a class="logo-desktop" href="#"><img src="img/Bee Media logo.svg" alt="logo af bien"></a>
+                
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <form id="form" role="search">
+                        <input type="search" id="query" name="q" placeholder="Søg..." aria.label="søgefelt">
+                </div>
             </nav>
         </header>
 
@@ -48,11 +54,11 @@
         </header>
 
         <!-- Hovedindhold -->
-        <main>   
+        <main> 
             <!-- Section a -->
             <section class="Section-a">
                 <div class="container-a">  
-                    <div class="text">
+                    <div class="text-a">
                       <h1>Vi er et Multimediebureau med speciale I Grafisk design, UI-UX Branding og SoMe</h1>
 
                       <p>
@@ -76,7 +82,7 @@
                     </div>
 
                     <div class="icon-area-b">
-                        <a class="some-icon" href="#"><img src="img/sociale-medier-symbol.png" alt="some-icon">
+                        <a class="some-icon" href="#"><img src="img/some-symbol.png" alt="some-icon">
                         SoMe</a>
 
                         <a class="webdesign-icon" href="#"><img src="img/webdesign-symbol.png" alt="webdesign-icon">
@@ -90,7 +96,7 @@
 
             <!-- Section b -->
             <section class="section-b">
-                <div class="container-b">
+                
                     <!-- Animeret banner mobil -->
                     <div class="banner-mobile-b">
                         <img src="img/our-cases-banner-mobil.gif" alt="vores seneste projekter animeret banner">
@@ -99,16 +105,18 @@
                     <div class="banner-desktop-b">
                         <img src="img/our-cases-banner-desktop.gif" alt="vores seneste projekter animeret banner">
                     </div>
-
+            <div class="container-b">
                     <div class="section-b-billede">
                         <img src="img/fansy-firma-logo.png" alt="billede med Fansy logo">
                     </div>
+                    <div class="wrapper-case">
+                        <div class="read-about-case">
+                            <h1>Fansy</h1>
+                            <p>Fansy er et ny opstartet selvejet firma i smykkeverdenen, som sælger fantastiske håndlavede og specialfremstillede smykker til kvinder. Smykkedesigneren har bedt os hjælpe hende med at styrke brandidentiteten og give hendes firma mere synlighed. Alle vores specialister arbejdede sammen om designforslag til nyt logo og farveskema.</p>
+                        </div>
 
-                    <div class="read-about-case">
-                        <p>Fansy er et ny opstartet selvejet firma i smykkeverdenen, som sælger fantastiske håndlavede og specialfremstillede smykker til kvinder. Smykkedesigneren har bedt os hjælpe hende med at styrke brandidentiteten og give hendes firma mere synlighed. Alle vores specialister arbejdede sammen om designforslag til nyt logo og farveskema.</p>
-                
+                        <div class="button"><a class="btn" href="#">Læs mere om vores andre cases</a></div>
                     </div>
-                    <div class="button"><a class="btn" href="#">Læs mere om vores andre cases</a></div>
                 </div>
             </section>
 
@@ -140,10 +148,12 @@
                      <a href="#"><img class="instagram" src="img/instagram-icon.svg" alt="Instagram"></a>
                      <a href="#"><img class="facebook" src="img/facebook-icon.svg" alt="Facebook"></a>
                      <a href="#"><img class="tiktok" src="img/tiktok-icon.svg" alt="TikTok"></a>
-                    
                 </div>
             </section>
-
+             <!-- billede med grene til desktop --> 
+             <div class="footer-desktop-img">
+                <img class="branch-img" src="img/tree-branch.png" alt="visuelt billede af grenen ">
+            </div>
         </footer>
 
 
