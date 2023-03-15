@@ -19,6 +19,7 @@ $secondary-font: 'Roboto Slab', serif;
 }
 
 @mixin btn($bg-color:$bg-color, $btn-padding: 1em 1em){
+    display: block;
     background-color: white;
     padding: $btn-padding;
     border-radius: 18px;
